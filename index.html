@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>한빛산업 - 대전·세종·충청 단열재 도소매</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900" x-data="siteData()">
+  <div class="bg-black py-2 text-xs text-white">
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <span>한빛산업 | 대전·세종·충청 단열재 도소매</span>
+      <a href="#contact" class="underline opacity-90 hover:opacity-100">문의 042-000-0000</a>
+    </div>
+  </div>
+  <header class="sticky top-0 z-40 border-b bg-white/80 backdrop-blur">
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
+      <a href="#home" class="text-lg font-extrabold tracking-tight">HANBIT INDUSTRY</a>
+      <nav class="hidden gap-6 text-sm md:flex">
+        <a href="#products" class="hover:underline">제품</a>
+        <a href="#kits" class="hover:underline">키트</a>
+        <a href="#calc" class="hover:underline">계산기</a>
+        <a href="#rfq" class="hover:underline">견적요청</a>
+        <a href="#about" class="hover:underline">회사소개</a>
+        <a href="#contact" class="hover:underline">오시는길</a>
+      </nav>
+      <a href="#rfq" class="rounded-xl border bg-black px-3 py-2 text-xs font-semibold text-white">바로 견적</a>
+    </div>
+  </header>
+  <section id="home" class="border-b bg-gradient-to-b from-white to-gray-50">
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 grid grid-cols-1 items-center gap-10 py-16 md:grid-cols-2">
+      <div>
+        <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+          대전·충청 <b>단열 문제</b>는 한빛산업이 <b>바로 해결</b>합니다
+        </h1>
+        <p class="mt-4 text-base text-gray-600">
+          PIR·XPS·글라스울·배관튜브부터 테이프/접착제까지. 현장 맞춤 재단, 당일 픽업/화물 출고 지원.
+        </p>
+        <div class="mt-6 flex gap-3">
+          <a href="#rfq" class="rounded-xl border bg-black px-4 py-3 text-white">도면/사진으로 견적</a>
+          <a href="#calc" class="rounded-xl border px-4 py-3">필요수량 계산</a>
+        </div>
+        <div class="mt-8 grid grid-cols-3 gap-3">
+          <div class="rounded-2xl border p-4 text-center shadow-sm"><div class="text-2xl font-bold">1~3일</div><div class="mt-1 text-xs text-gray-500">평균 납기</div></div>
+          <div class="rounded-2xl border p-4 text-center shadow-sm"><div class="text-2xl font-bold">70+</div><div class="mt-1 text-xs text-gray-500">즉시 재고 품목</div></div>
+          <div class="rounded-2xl border p-4 text-center shadow-sm"><div class="text-2xl font-bold">20곳+</div><div class="mt-1 text-xs text-gray-500">현장 시공 파트너</div></div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-[4/3] w-full rounded-3xl border bg-white p-4 shadow-lg">
+          <div class="grid h-full grid-cols-3 gap-3">
+            <div class="rounded-xl border bg-gray-100"></div>
+            <div class="rounded-xl border bg-gray-100"></div>
+            <div class="rounded-xl border bg-gray-100"></div>
+            <div class="rounded-xl border bg-gray-100"></div>
+            <div class="rounded-xl border bg-gray-100"></div>
+            <div class="rounded-xl border bg-gray-100"></div>
+          </div>
+          <p class="mt-3 text-center text-xs text-gray-500">* 실제 제품 사진/로고/인증서 이미지를 여기에 교체</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="products" class="border-b bg-white py-16">
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-10 text-center">
+        <p class="text-sm font-semibold tracking-widest text-sky-600">PRODUCTS</p>
+        <h2 class="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">주력 제품 라인업</h2>
+        <p class="mt-3 text-base text-gray-600">자주 찾는 규격 위주로 빠르게 출고합니다</p>
+      </div>
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" id="productGrid"></div>
+    </div>
+  </section>
+  <section id="kits" class="border-b bg-gray-50 py-16">
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-10 text-center">
+        <p class="text-sm font-semibold tracking-widest text-sky-600">KITS</p>
+        <h2 class="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">문제 해결형 키트</h2>
+        <p class="mt-3 text-base text-gray-600">초보자도 쉽게: 용도별로 묶어 바로 시공</p>
+      </div>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border bg-white p-6 shadow-sm">
+          <div class="flex items-center justify-between"><h3 class="text-lg font-semibold">카페/소상공인 냉·난방 절감</h3><span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium">추천</span></div>
+          <ul class="mt-3 list-disc pl-5 text-sm text-gray-700"><li>반사단열재 롤</li><li>알루미늄 테이프</li><li>문풍지</li></ul>
+          <div class="mt-5"><a href="#rfq" class="rounded-xl border bg-black px-4 py-2 text-sm text-white">키트 문의</a></div>
+        </div>
+        <div class="rounded-2xl border bg-white p-6 shadow-sm">
+          <div class="flex items-center justify-between"><h3 class="text-lg font-semibold">컨테이너/푸드트럭 단열</h3><span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium">추천</span></div>
+          <ul class="mt-3 list-disc pl-5 text-sm text-gray-700"><li>PIR 보드</li><li>접착제</li><li>테이프</li></ul>
+          <div class="mt-5"><a href="#rfq" class="rounded-xl border bg-black px-4 py-2 text-sm text-white">키트 문의</a></div>
+        </div>
+        <div class="rounded-2xl border bg-white p-6 shadow-sm">
+          <div class="flex items-center justify-between"><h3 class="text-lg font-semibold">배관 결로 방지</h3><span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium">추천</span></div>
+          <ul class="mt-3 list-disc pl-5 text-sm text-gray-700"><li>단열튜브</li><li>알루미늄 테이프</li><li>방습필름</li></ul>
+          <div class="mt-5"><a href="#rfq" class="rounded-xl border bg-black px-4 py-2 text-sm text-white">키트 문의</a></div>
+        </div>
+        <div class="rounded-2xl border bg-white p-6 shadow-sm">
+          <div class="flex items-center justify-between"><h3 class="text-lg font-semibold">지붕/다락 열차단</h3><span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium">추천</span></div>
+          <ul class="mt-3 list-disc pl-5 text-sm text-gray-700"><li>반사단열재</li><li>고정핀</li><li>테이프</li></ul>
+          <div class="mt-5"><a href="#rfq" class="rounded-xl border bg-black px-4 py-2 text-sm text-white">키트 문의</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="calc" class="border-b bg-white py-16">
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-10 text-center">
+        <p class="text-sm font-semibold tracking-widest text-sky-600">CALCULATOR</p>
+        <h2 class="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">필요 수량·부자재 간이 계산기</h2>
+        <p class="mt-3 text-base text-gray-600">벽 한 면 기준 예시 계산(600×1200 보드 기준)</p>
+      </div>
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+        <div class="rounded-2xl border p-6 shadow-sm">
+          <div class="grid grid-cols-2 gap-4">
+            <label class="flex w-full flex-col gap-1"><span class="text-sm font-medium text-gray-700">가로(m)</span><input class="w-full rounded-xl border px-3 py-2 text-sm outline-none ring-0 focus:border-sky-500" type="number" step="0.1" x-model.number="w"></label>
+            <label class="flex w-full flex-col gap-1"><span class="text-sm font-medium text-gray-700">세로/높이(m)</span><input class="w-full rounded-xl border px-3 py-2 text-sm outline-none ring-0 focus:border-sky-500" type="number" step="0.1" x-model.number="h"></label>
+            <label class="flex w-full flex-col gap-1"><span class="text-sm font-medium text-gray-700">두께</span><select class="w-full rounded-xl border px-3 py-2 text-sm" x-model="t"><option value="20">20mm</option><option value="30" selected>30mm</option><option value="50">50mm</option></select></label>
+            <label class="flex w-full flex-col gap-1"><span class="text-sm font-medium text-gray-700">제품</span><select class="w-full rounded-xl border px-3 py-2 text-sm" x-model="prod"><option value="pir">PIR 보드</option><option value="xps">XPS 보드</option><option value="glasswool">글라스울</option><option value="reflective">반사단열재</option></select></label>
+          </div>
+        </div>
+        <div class="rounded-2xl border p-6 shadow-sm lg:col-span-2">
+          <h4 class="text-lg font-semibold">결과</h4>
+          <div class="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-4">
+            <div class="rounded-2xl border p-4 text-center shadow-sm"><div class="text-2xl font-bold" x-text="area().toFixed(2)"></div><div class="mt-1 text-xs text-gray-500">면적(m²)</div></div>
+            <div class="rounded-2xl border p-4 text-center shadow-sm"><div class="text-2xl font-bold" x-text="sheets()"></div><div class="mt-1 text-xs text-gray-500">필요 보드 장수(장)</div></div>
+            <div class="rounded-2xl border p-4 text-center shadow-sm"><div class="text-2xl font-bold" x-text="'~' + tapeRolls()"></div><div class="mt-1 text-xs text-gray-500">테이프(롤)</div></div>
+            <div class="rounded-2xl border p-4 text-center shadow-sm"><div class="text-2xl font-bold" x-text="'~' + adhesive()"></div><div class="mt-1 text-xs text-gray-500">접착제(개)</div></div>
+          </div>
+          <p class="mt-3 text-xs text-gray-500">* 실제 수량은 개구부/겹침/현장 조건에 따라 달라질 수 있습니다.</p>
+          <div class="mt-5"><a href="#rfq" class="rounded-xl border bg-black px-4 py-2 text-sm text-white">이 결과로 견적 요청</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="rfq" class="border-b bg-gray-50 py-16">
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-10 text-center">
+        <p class="text-sm font-semibold tracking-widest text-sky-600">QUOTE</p>
+        <h2 class="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">도면·사진 첨부 견적요청</h2>
+        <p class="mt-3 text-base text-gray-600">간단 정보만 남겨주시면 빠르게 상담드립니다</p>
+      </div>
+      <form class="grid grid-cols-1 gap-4 md:grid-cols-2" onsubmit="return submitRFQ(event)">
+        <label class="flex w-full flex-col gap-1"><span class="text-sm font-medium text-gray-700">이름</span><input required class="w-full rounded-xl border px-3 py-2 text-sm outline-none ring-0 focus:border-sky-500" name="name"></label>
+        <label class="flex w-full flex-col gap-1"><span class="text-sm font-medium text-gray-700">연락처</span><input required class="w-full rounded-xl border px-3 py-2 text-sm outline-none ring-0 focus:border-sky-500" name="phone" placeholder="010-0000-0000"></label>
+        <label class="flex w-full flex-col gap-1"><span class="text-sm font-medium text-gray-700">이메일</span><input type="email" class="w-full rounded-xl border px-3 py-2 text-sm outline-none ring-0 focus:border-sky-500" name="email"></label>
+        <label class="flex w-full flex-col gap-1"><span class="text-sm font-medium text-gray-700">회사명(선택)</span><input class="w-full rounded-xl border px-3 py-2 text-sm outline-none ring-0 focus:border-sky-500" name="company"></label>
+        <label class="flex w-full flex-col gap-1 md:col-span-2"><span class="text-sm font-medium text-gray-700">요청사항</span><textarea class="min-h-[100px] w-full rounded-xl border px-3 py-2 text-sm outline-none focus:border-sky-500" name="message" placeholder="규격, 수량, 배송지(대전/세종/충청 등), 납기 희망일을 적어주세요."></textarea></label>
+        <div class="md:col-span-2"><button class="w-full rounded-xl border bg-black px-4 py-3 text-white">견적 요청하기</button></div>
+      </form>
+      <div id="rfqSuccess" class="hidden rounded-2xl border bg-green-50 p-6 text-center text-green-900 mt-6">견적요청이 접수되었습니다. 담당자가 영업시간 내 연락드립니다.</div>
+    </div>
+  </section>
+  <section id="about" class="border-b bg-white py-16">
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-10 text-center">
+        <p class="text-sm font-semibold tracking-widest text-sky-600">ABOUT</p>
+        <h2 class="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">한빛산업(HANBIT INDUSTRY)</h2>
+        <p class="mt-3 text-base text-gray-600">대전광역시 기반, 단열재 도·소매 및 현장 시공 파트너 네트워크</p>
+      </div>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border p-6 shadow-sm"><h4 class="font-semibold">사업 영역</h4><ul class="mt-3 list-disc pl-5 text-sm text-gray-700"><li>PIR/XPS/PF/글라스울/록울/반사단열재 판매</li><li>배관·덕트 단열재 및 부자재(테이프/접착제) 공급</li><li>맞춤 재단(컷-투-사이즈), 현장 납품 및 시공 파트너 매칭</li><li>KS/KFI/시험성적서 제공, 감리/입찰 대응</li></ul></div>
+        <div class="rounded-2xl border p-6 shadow-sm"><h4 class="font-semibold">특장점</h4><ul class="mt-3 list-disc pl-5 text-sm text-gray-700"><li>대전·세종·충청권 당일 픽업/화물 출고 경험 다수</li><li>초보자도 쉬운 키트/가이드 제공</li><li>현장 상황에 맞춘 제품 제안 및 수량 최적화</li></ul></div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="bg-white py-16">
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mb-10 text-center">
+        <p class="text-sm font-semibold tracking-widest text-sky-600">CONTACT</p>
+        <h2 class="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">오시는 길 & 연락처</h2>
+        <p class="mt-3 text-base text-gray-600">영업시간: 평일 08:30~18:00 / 토 09:00~13:00</p>
+      </div>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div class="rounded-2xl border p-6 shadow-sm"><h4 class="font-semibold">연락처</h4><div class="mt-3 space-y-2 text-sm text-gray-700"><p>전화: 042-000-0000</p><p>이메일: sales@hanbit-ins.co.kr</p><p>주소: 대전광역시 ○○구 ○○로 00 (한빛산업 창고)</p></div><div class="mt-5"><a href="#rfq" class="rounded-xl border bg-black px-4 py-2 text-sm text-white">견적/방문 예약</a></div></div>
+        <div class="overflow-hidden rounded-2xl border shadow-sm"><div class="flex aspect-video w-full items-center justify-center bg-gray-100 text-sm text-gray-500">지도(대전) 위치 위젯 자리</div></div>
+      </div>
+      <div class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div class="rounded-xl border p-4 text-sm"><b>사업자정보</b><br>상호: 한빛산업 | 대표: ○○○<br>사업자등록번호: 000-00-00000</div>
+        <div class="rounded-xl border p-4 text-sm"><b>계좌안내</b><br>은행: ○○은행 000-0000-00000 (예금주: 한빛산업)</div>
+        <div class="rounded-xl border p-4 text-sm"><b>고객센터</b><br>카카오채널/네이버 톡톡 연동 가능</div>
+      </div>
+    </div>
+  </section>
+  <footer class="border-t bg-white py-10 text-sm">
+    <div class="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-between gap-4 sm:flex-row">
+      <p class="text-gray-500">© <span x-text="new Date().getFullYear()"></span> HANBIT INDUSTRY. All rights reserved.</p>
+      <nav class="flex flex-wrap items-center justify-center gap-4 text-gray-600"><a href="#about" class="hover:underline">회사소개</a><a href="#products" class="hover:underline">제품</a><a href="#rfq" class="hover:underline">견적요청</a><a href="#contact" class="hover:underline">문의</a></nav>
+    </div>
+  </footer>
+  <script>
+  function siteData(){return {w:3,h:2.4,t:30,prod:'pir',area(){return Number(this.w)*Number(this.h)},sheets(){const sa=0.72;return Math.max(1,Math.ceil(this.area()/sa))},tapeRolls(){return Math.max(1,Math.ceil((this.sheets()*2.4)/50))},adhesive(){return (this.prod==='pir'||this.prod==='xps')?1:0}}}
+  const PRODUCTS=[{id:'pir',name:'PIR 단열보드',desc:'준불연, 고단열. 냉·난방 절감 핵심.',tags:['준불연','고단열','보드'],options:['20mm','30mm','50mm']},{id:'xps',name:'XPS 압출법 보드',desc:'바닥/벽체 다용도. 압축강도 우수.',tags:['보드','경량'],options:['30mm','50mm']},{id:'glasswool',name:'글라스울 롤(은박)',desc:'지붕·다락·창고 대면적 시공에 적합.',tags:['롤','흡음'],options:['50mm','75mm']},{id:'reflective',name:'반사단열재(버블/호일)',desc:'여름 복사열 차단, 겨울 보온에 효과적.',tags:['롤','경량'],options:['싱글','더블']},{id:'pipe',name:'배관 단열튜브(NBR/PVC)',desc:'결로·열손실 방지. 15A~50A 보유.',tags:['배관','결로방지'],options:['15A','20A','25A']},{id:'tapes',name:'알루미늄/부틸/크래프트 테이프',desc:'마감 필수 부자재. KS 규격 라인업.',tags:['부자재'],options:['알루미늄','부틸','크래프트']}];
+  const grid=document.getElementById('productGrid');
+  grid.innerHTML=PRODUCTS.map(p=>`<div class="group rounded-2xl border p-5 shadow-sm transition hover:shadow-md"><div class="flex items-start justify-between"><h3 class="text-lg font-semibold">${p.name}</h3><span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium">재고 보유</span></div><p class="mt-2 text-sm text-gray-600">${p.desc}</p><div class="mt-4 flex flex-wrap gap-2">${p.tags.map(t=>`<span class="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs">${t}</span>`).join('')}</div><div class="mt-4 text-sm text-gray-700">규격: ${p.options.join(' · ')}</div><div class="mt-5 flex gap-2"><a href="#rfq" class="flex-1 rounded-xl border bg-black px-3 py-2 text-center text-sm text-white">바로 견적</a><a href="#contact" class="flex-1 rounded-xl border px-3 py-2 text-center text-sm">재고문의</a></div></div>`).join('');
+  function submitRFQ(e){e.preventDefault();document.getElementById('rfqSuccess').classList.remove('hidden');e.target.reset();return false}
+  window.submitRFQ=submitRFQ;
+  </script>
+</body>
+</html>
